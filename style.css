@@ -1,0 +1,115 @@
+html
+{
+	margin:50px;
+	font-size: 1em;
+
+}
+
+body
+{	
+	background-color: wheat;
+}
+
+fieldset
+{
+	padding: 10px;
+}
+
+div.form-div
+{
+	width: 75%;
+	margin-left: 12.5%;
+	border: 1px solid black;
+	padding: 20px;
+}
+
+form#myForm p
+{
+	line-height: 1em;
+}
+
+#check
+{
+	width: 120px;
+	height: 50px;
+	border-radius: 25px;
+	display: block;
+	margin: 0 auto;
+	font-weight: 900;
+	font-size: 18px;
+}
+.button-active
+{
+	background-color: #48FF28;
+	border: 2px solid #48FF28;
+	color: white;
+}
+
+.button-active:hover
+{
+	background-color: #48E828;
+	border: 2px solid #48E828;
+	font-weight: 900;
+	color: white;
+}
+
+.unactive
+{
+	background-color: grey;
+	border: 2px solid grey;
+	color: black;
+}
+
+.unactive:hover
+{
+	background-color: grey;
+	border: 2px solid grey;
+	color: black;
+}
+
+#show-score
+{
+	font-size: 24px;
+	text-align: center;
+	font-weight: 900;
+}
+
+
+#try-again
+{
+	width: 200px;
+	height: 50px;
+	border-radius: 25px;
+	display: block;
+	margin: 0 auto;
+	font-weight: 900;
+	font-size: 18px;
+}
+#try-again:hover
+{
+	background-color: #48E828;
+	border: 2px solid #48E828;
+	font-weight: 900;
+	color: white;
+}
+.try-again-hidden
+{
+	visibility: hidden;
+}
+
+.try-again-visible
+{
+	background-color: #48FF28;
+	border: 2px solid #48FF28;
+	color: white;
+	visibility: visible;
+}
+
+
+
+
+.red
+{
+	color: red;
+}
+

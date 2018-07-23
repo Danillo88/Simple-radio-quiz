@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+
+<title>
+
+</title>
+</head>
+<body>
+
+<div class="form-div">
+<form id="myForm">
+
+
+    <fieldset>
+        <legend>W którym roku urodził się Piłsudski?</legend>
+        <p><label><input type="radio" value="1886" name="birth" /> 1886</label></p>
+        <p><label><input type="radio" value="1893" name="birth" /> 1893</label></p>
+        <p><label><input type="radio" value="1876" name="birth" /> 1876</label></p>
+        <p><label><input type="radio" value="1867" name="birth" /> 1867</label></p>
+    </fieldset>
+    <fieldset>
+        <legend>W którym roku Piłsudski dokonał przewrotu majowego?</legend>
+        <p><label><input type="radio" value="1924" name="rebelion" /> 17 Maja 1924</label></p>
+        <p><label><input type="radio" value="1928" name="rebelion" /> 24 Maja 1928</label></p>
+        <p><label><input type="radio" value="1926" name="rebelion" /> 12 Maja 1926</label></p>
+        <p><label><input type="radio" value="1921" name="rebelion" /> 5 Maja 1921</label></p>
+    </fieldset>
+			
+	  
+</form>
+<button id="check" class="button-active">Sprawdź</button>
+</div>
+
+<div id="show-score"></div>
+<button id="try-again" class="try-again-hidden">Sprubuj jeszcze raz</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="quizjs.js">
+
+</script>
+</body>
+
+</html>
