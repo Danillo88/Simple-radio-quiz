@@ -1,12 +1,21 @@
 let points = 0;
 uncheck_all_radio_buttons();
 
+const correctAnswerTab = [3,2,0,2,1,3,1,3,1,2];
+
 const check_quiz = document.getElementById('check');
 const try_again_val = document.getElementById('try-again');
 
 check_quiz.addEventListener('click',check_answer_one);
 check_quiz.addEventListener('click',check_answer_two);
-
+check_quiz.addEventListener('click',check_answer_three);
+check_quiz.addEventListener('click',check_answer_four);
+check_quiz.addEventListener('click',check_answer_five);
+check_quiz.addEventListener('click',check_answer_six);
+check_quiz.addEventListener('click',check_answer_seven);
+check_quiz.addEventListener('click',check_answer_eight);
+check_quiz.addEventListener('click',check_answer_nine);
+check_quiz.addEventListener('click',check_answer_ten);
 
 check_quiz.addEventListener('click',total_points);
 check_quiz.addEventListener('click',unactive_button);
@@ -21,32 +30,82 @@ function check_answer_one()
 		const birthRadio = document.querySelectorAll('input[name="birth"]');
    
   	checkError(birthRadio,1);
-  	
-		for (i = 0; i<birthRadio.length ; i++)
-			{
-					if (birthRadio[3].checked)
-					 {
-					 		points++;
-					 		break;	
-					 }	 	
-			}
+  	checkIsAnswerCorrect(birthRadio,correctAnswerTab[0]);
+
 				
 }
 
 function check_answer_two() 
 {
 		const rebelionRadio = document.querySelectorAll('input[name="rebelion"]');
+		
 		checkError(rebelionRadio,2);
-		for (i = 0; i<rebelionRadio.length ; i++)
-			{
-					if (rebelionRadio[2].checked)
-					 {
-					 		points++;
-					 		break;	
-					 }	 	
-			}	
+		checkIsAnswerCorrect(rebelionRadio,correctAnswerTab[1]);
+
 }
 
+function check_answer_three() 
+{
+		const babtistRadio = document.querySelectorAll('input[name="babtist"]');
+		
+		checkError(babtistRadio,3);
+		checkIsAnswerCorrect(babtistRadio,correctAnswerTab[2]);
+}
+function check_answer_four() 
+{
+		const orderRadio = document.querySelectorAll('input[name="order"]');
+		
+		checkError(orderRadio,4);
+		checkIsAnswerCorrect(orderRadio,correctAnswerTab[3]);
+}
+function check_answer_five() 
+{
+		const dynastyRadio = document.querySelectorAll('input[name="dynasty"]');
+		
+		checkError(dynastyRadio,5);
+		checkIsAnswerCorrect(dynastyRadio,correctAnswerTab[4]);
+}
+
+function check_answer_six() 
+{
+		const degRadio = document.querySelectorAll('input[name="deg"]');
+		
+		checkError(degRadio,6);
+		checkIsAnswerCorrect(degRadio,correctAnswerTab[5]);
+}
+
+function check_answer_seven() 
+{
+		const reunionRadio = document.querySelectorAll('input[name="reunion"]');
+		
+		checkError(reunionRadio,7);
+		checkIsAnswerCorrect(reunionRadio,correctAnswerTab[6]);
+}
+
+function check_answer_eight() 
+{
+		const disRadio = document.querySelectorAll('input[name="dis"]');
+		
+		checkError(disRadio,8);
+		checkIsAnswerCorrect(disRadio,correctAnswerTab[7]);
+}
+
+
+function check_answer_nine() 
+{
+		const constRadio = document.querySelectorAll('input[name="const"]');
+		
+		checkError(constRadio,9);
+		checkIsAnswerCorrect(constRadio,correctAnswerTab[8]);
+}
+
+function check_answer_ten() 
+{
+		const constRadio = document.querySelectorAll('input[name="house"]');
+		
+		checkError(constRadio,10);
+		checkIsAnswerCorrect(constRadio,correctAnswerTab[9]);
+}
 
 function total_points()
 {
@@ -81,7 +140,7 @@ function uncheck_all_radio_buttons()
 	}
 }
 
-function checkError(allInputs, set_number)
+function checkError(allInputs,set_number)
 {
 		let checkedIndex = -1;
 		for (let i=0; i<allInputs.length; i++) 
@@ -89,6 +148,7 @@ function checkError(allInputs, set_number)
     if (allInputs[i].checked) 
     	{
         checkedIndex = i;
+        
         break;
    		}
    }
@@ -105,6 +165,33 @@ function checkError(allInputs, set_number)
 }
 
 
+function checkIsAnswerCorrect(allInputs, answerNumber)
+{
+		let checkedIndex = -1;
+		
+		for (let i=0; i<allInputs.length; i++) 
+		{
+    if (allInputs[i].checked) 
+    	{
+        checkedIndex = i;
+        
+        break;
+   		}
+   }
+   
+   
 
+    if (allInputs[answerNumber].checked) 
+    	{
+    			$(allInputs[answerNumber]).parents("p").addClass('green');
+					points++;
+        
+   		}else {
+   			$(allInputs[checkedIndex]).parents("p").addClass('red');
+   			}
+   
+   
+
+}
 
 

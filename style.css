@@ -81,7 +81,7 @@ form#myForm p
 	height: 50px;
 	border-radius: 25px;
 	display: block;
-	margin: 0 auto;
+	margin: 100px auto;
 	font-weight: 900;
 	font-size: 18px;
 }
@@ -111,5 +111,12 @@ form#myForm p
 .red
 {
 	color: red;
+	font-weight: 900;
+}
+
+.green
+{
+	color: #48FF28;
+	font-weight: 900;
 }
 
